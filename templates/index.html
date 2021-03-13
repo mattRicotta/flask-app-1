@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="cornercircle"></div>
+<header>
+  <a href="https://www.github.com/mattRicotta" target="_blank" alt="cannoli logo"><img src="../static/images/cannoli.png" class="logo"></a>
+  <div class="title"><h1>Matt Licata</h1>
+  <h2>Quality Analyst | Data Management Specialist</h2></div>
+  <nav>
+    <a href=mailto:mattjlicata@gmail.com target="_blank">Email</a> | 
+    <a href=https://www.linkedin.com/in/matt-licata-1999351a3 target="_blank">LinkedIn</a> |
+    <a href=https://www.github.com/mattRicotta target="_blank">GitHub</a>
+  </nav>
+</header>
+<main>
+  <section id="about">
+    <hr>
+    <h3 class="title">About</h3>
+    <p>{{ about }}</p>
+  </section>
+  <section id="workexperience">    
+    <hr>
+    <h3 class="title">Work Experience</h3>
+    <!-- loop through work_experience from resume_data -->
+    {% for w in work_experience %}
+      <div class="entry">
+        <div class="title">
+          <b>{{ w['title'] }}</b><br>
+          <i>{{ w['company'] }}, {{ w['city'] }} | {{ w['start_date'] }} - {{ w['end_date'] }}</i>
+        </div>
+        <ul>
+          {% for bulletpoint in w['description'] %}
+            <li>{{ bulletpoint }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
+  <section id="education">
+    <hr>
+    <h3 class="title">Education</h3>
+    <!-- loop through education from resume_data -->
+    {% for ed in education %}
+      <div class="entry">
+        <b>{{ ed['degree'] }} | {{ ed['major'] }}</b><br>
+        <i>{{ ed['school'] }}, {{ ed['city'] }} | {{ ed['dates'] }}</i>
+      </div>
+    {% endfor %}
+  </section>
+  <section id="certifications">
+    <hr>
+    <h3 class="title"> Certifications and Continuing Education</h3>
+    <!-- loop through certifications from resume_data -->
+    {% for cert in certifications %}
+      <div class="entry">
+        <b>{{ cert['name'] }}</b><br>
+        <i>{{ cert['institution'] }} | {{ cert['issued_on'] }}</i>
+      </div>
+    {% endfor %}
+  </section>
+  <section id="publications">
+    <hr>
+    <h3 class="title">Publications</h3>
+    <!-- loop through publications from resume_data -->
+    {% for p in publications %}
+      <div class="entry">
+        {{ p['authors'] }}. <i>{{ p['title'] }}</i>. <b>{{ p['journal'] }}</b>. {{ p['pub_date'] }}. 
+        <a href="{{ p['url'] }}" target="_blank">{{ p['url_label'] }}</a>
+      </div>
+    {% endfor %}
+  </section>
+  <section id="skills">
+    <hr>
+    <h3 class="title"> Skills</h3>
+    <!-- create column for each list in skills | USE 3 COLUMNS/LISTS! -->
+    {% for skill_list in skills %}
+      <div class="column">
+        <ul>
+          {% for skill in skill_list %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
+  <section id="hobbies">
+    <hr>
+    <h3 class="title">Hobbies & Interests</h3>
+    <!-- create column for each list in hobbies | USE 3 COLUMNS/LISTS! -->
+    {% for hobby_list in hobbies %}
+      <div class="column">
+        <ul>
+          {% for hobby in hobby_list %}
+            <li>{{ hobby }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
+</main>
+{% endblock %}
