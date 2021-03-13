@@ -99,19 +99,19 @@ education = [
 """
 certifications dictionary format:
   {
-    'certification': '', 
+    'name': '', 
     'institution': '',
     'issued_on': 'mmm yyyy'
   }
 """
 certifications = [
   {
-    'certification': 'Salesforce Certified Administrator', 
+    'name': 'Salesforce Certified Administrator', 
     'institution': 'Salesforce.com',
     'issued_on': 'mmm yyyy'
   },   
   {
-    'certification': 'Sensory Panel Management', 
+    'name': 'Sensory Panel Management', 
     'institution': 'Seibel Institute of Technology',
     'issued_on': 'Nov 2017'
   }
