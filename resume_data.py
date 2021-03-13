@@ -57,6 +57,30 @@ work_experience = [
       'Developed over 40 new SOPs during a $56M expansion project.', 
       'Consulted with engineering team in the design and installation of $2M yeast cellaring system and gathered and analyzed data to optimize ABER meter calibration and yeast propagation and pitching methods.'
     ]
+  },
+    {
+    'title' : 'Line Cook', 
+    'company' : 'Alto Italian Restaurant & Bar', 
+    'city' : 'Lemont, PA', 
+    'start_date' : 'Jun 2010', 
+    'end_date' : 'Jul 2011', 
+    'description' : [
+      'Operated, organized, and cleaned cold-side, sauté, and grill stations.', 
+      'Developed recipes for seasonal menu items.', 
+      'Trained new hires on prep and service tasks.'
+    ]
+  },
+    {
+    'title' : 'Research Technologist III', 
+    'company' : 'Tumor Progression Lab | Penn State University', 
+    'city' : 'University Park, PA', 
+    'start_date' : 'Oct 2006', 
+    'end_date' : 'May 2010', 
+    'description' : [
+      'Contributed to research projects with resulting in a successful publication in Molecular Carcinogenesis', 
+      'Oversaw laboratory operations, safety compliance, and purchasing/inventory.', 
+      'Managed mouse colony and maintained transgenic breeder lines.'
+    ]
   }
 ]
 # ======================================================
