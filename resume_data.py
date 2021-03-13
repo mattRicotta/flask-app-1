@@ -72,7 +72,7 @@ work_experience = [
   },
     {
     'title' : 'Research Technologist III', 
-    'company' : 'Tumor Progression Lab | Penn State University', 
+    'company' : 'Penn State University - Tumor Progression Lab', 
     'city' : 'University Park, PA', 
     'start_date' : 'Oct 2006', 
     'end_date' : 'May 2010', 
@@ -132,7 +132,7 @@ certifications = [
   {
     'name': 'Salesforce Certified Administrator', 
     'institution': 'Salesforce.com',
-    'issued_on': 'mmm yyyy'
+    'issued_on': 'Dec 2020'
   },   
   {
     'name': 'Sensory Panel Management', 
