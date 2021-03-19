@@ -54,6 +54,7 @@ ul {
 
 .column{
     display: inline-block;
+    width: 33%;
     vertical-align: top;
     margin-top: 10px;
 }
