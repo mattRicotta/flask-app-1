@@ -171,7 +171,8 @@ publication format:
 """
 publications = [
   {
-    'title': 'Tumor suppressor and oncogene actions of TGFbeta1 occur early in skin carcinogenesis and are mediated by Smad3',
+    'title': ('Tumor suppressor and oncogene actions of TGFbeta1 occur early in skin carcinogenesis and are '
+              'mediated by Smad3'),
     'authors': 'DS Bae, N Blazanin, M Licata, J Lee, AB Glick',
     'journal': 'Molecular Carcinogenesis',
     'pub_date': 'May 2009',
@@ -179,8 +180,8 @@ publications = [
     'url_label': 'PubMed ID: 18942075'
   },
   {
-    'title': ('Evaluating viral interference between infectious bronchitis virus and Newcastle disease virus vaccine '
-              'strains using quantitative reverse transcription-polymerase chain reaction'),
+    'title': ('Evaluating viral interference between infectious bronchitis virus and Newcastle disease virus'
+              ' vaccine strains using quantitative reverse transcription-polymerase chain reaction'),
     'authors': 'J Gelb Jr, BS Ladman, MJ Licata, MH Shapiro, LR Campion',
     'journal': 'Avian Diseases',
     'pub_date': 'Dec 2007',
