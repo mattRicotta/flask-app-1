@@ -20,7 +20,6 @@
   <section id="workexperience">    
     <hr>
     <h3 class="title">Work Experience</h3>
-    <!-- loop through work_experience from resume_data -->
     {% for w in work_experience %}
       <div class="entry">
         <div class="title">
@@ -38,7 +37,6 @@
   <section id="education">
     <hr>
     <h3 class="title">Education</h3>
-    <!-- loop through education from resume_data -->
     {% for ed in education %}
       <div class="entry">
         <b>{{ ed['degree'] }} | {{ ed['major'] }}</b><br>
@@ -49,7 +47,6 @@
   <section id="certifications">
     <hr>
     <h3 class="title"> Certifications and Continuing Education</h3>
-    <!-- loop through certifications from resume_data -->
     {% for cert in certifications %}
       <div class="entry">
         <b>{{ cert['name'] }}</b><br>
@@ -60,7 +57,6 @@
   <section id="publications">
     <hr>
     <h3 class="title">Publications</h3>
-    <!-- loop through publications from resume_data -->
     {% for p in publications %}
       <div class="entry">
         {{ p['authors'] }}. <i>{{ p['title'] }}</i>. {{ p['journal'] }}. {{ p['pub_date'] }}. 
@@ -71,7 +67,6 @@
   <section id="skills">
     <hr>
     <h3 class="title"> Skills</h3>
-    <!-- create column for each list in skills | USE 3 COLUMNS/LISTS! -->
     {% for skill_list in skills %}
       <div class="column">
         <ul>
@@ -85,7 +80,6 @@
   <section id="hobbies">
     <hr>
     <h3 class="title">Hobbies & Interests</h3>
-    <!-- create column for each list in hobbies | USE 3 COLUMNS/LISTS! -->
     {% for hobby_list in hobbies %}
       <div class="column">
         <ul>

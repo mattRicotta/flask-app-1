@@ -53,8 +53,7 @@ ul {
 }
 
 .column{
-    display: inline-flex;
-    width: 33%;
+    display: inline-block;
     vertical-align: top;
     margin-top: 10px;
 }
