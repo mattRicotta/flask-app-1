@@ -1,12 +1,12 @@
 from flask import Flask, render_template
-from resume import about, work_experience, education, certifications, publications, skills, hobbies
-
+from resume import *
 app = Flask(__name__)
 
 @app.route('/')
 def index():
   return render_template(
     "index.html", 
+    links=links, 
     about=about, 
     work_experience=work_experience, 
     education=education, 

@@ -29,7 +29,9 @@ header {
     padding: 10px 20px;
     background-color:#fdbb7580;
 }
-
+header nav{
+    margin: 10px 0px;
+}
 section {
     margin: 20px 20px;
 }

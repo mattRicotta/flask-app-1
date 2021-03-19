@@ -1,5 +1,25 @@
 # Use this file to maintain resume data
 # ======================================================
+# LINKS
+links = [
+  {
+    'url': 'mailto:mattjlicata@gmail.com',
+    'label': 'Email'
+  },
+  {
+    'url': 'https://www.linkedin.com/in/matt-licata-1999351a3',
+    'label': 'LinkedIn'
+  },
+  {
+    'url': 'https://www.github.com/mattRicotta',
+    'label': 'GitHub'
+  },
+  {
+    'url': 'https://trailblazer.me/id/mlicata1',
+    'label': 'Trailhead by Salesforce'
+  }
+]
+# ======================================================
 # ABOUT
 about = ('Matt Licata has been in the craft brewing industry for 10 years and has 5 years of experience in '
          'QA/QC and lab management. He has a true passion for implementing technology to facilitate '
@@ -20,6 +40,18 @@ work_experience dictionary format:
   }
 """
 work_experience = [
+  {
+    'title' : 'Salesforce Intern', 
+    'company' : 'Advance Local', 
+    'city' : 'Philadelphia, PA', 
+    'start_date' : 'Jan 2021', 
+    'end_date' : 'present', 
+    'description' : [
+      ('Assisted with importing of lead lists by uploading, inspecting data quality, and deduping.'),
+      ('Built a Flow to create new users and automatically assign profiles and permission sets '
+       'by cloning an existing user account.'),
+    ]    
+  },
   {
     'title' : 'Lead Quality Analyst', 
     'company' : 'Portland Brewing Company (FIFCO USA)', 
@@ -146,15 +178,15 @@ certifications dictionary format:
 """
 certifications = [
   {
+    'name': 'Trailhead Ranger', 
+    'institution': 'Trailhead by Salesforce',
+    'issued_on': 'Dec 2020'
+  },
+  {
     'name': 'Salesforce Certified Administrator', 
     'institution': 'Salesforce.com',
     'issued_on': 'Dec 2020'
   },   
-  {
-    'name': 'Sensory Panel Management', 
-    'institution': 'Seibel Institute of Technology',
-    'issued_on': 'Nov 2017'
-  }
 ]
 # ======================================================
 # PUBLICATIONS

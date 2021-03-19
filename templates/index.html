@@ -3,13 +3,16 @@
 <div class="cornercircle"></div>
 <header>
   <a href="https://www.github.com/mattRicotta" target="_blank" alt="cannoli logo"><img src="../static/images/cannoli.png" class="logo"></a>
-  <div class="title"><h1>Matt Licata</h1>
-  <h2>Quality Analyst | Data Management Specialist</h2></div>
-  <nav>
-    <a href=mailto:mattjlicata@gmail.com target="_blank">Email</a> | 
-    <a href=https://www.linkedin.com/in/matt-licata-1999351a3 target="_blank">LinkedIn</a> |
-    <a href=https://www.github.com/mattRicotta target="_blank">GitHub</a>
-  </nav>
+  <div class="title">
+    <h1>Matt Licata</h1>
+    <h2>Quality Analyst | Data Management Specialist</h2>
+    <nav>
+      {% for link in links %}
+        <a href="{{ link['url'] }}" target="_blank">{{ link['label'] }}</a> 
+        {% if loop.index < links | length %} | {% endif %} 
+      {% endfor %}
+    </nav>
+  </div>
 </header>
 <main>
   <section id="about">
@@ -20,7 +23,7 @@
   <section id="workexperience">    
     <hr>
     <h3 class="title">Work Experience</h3>
-    {% for w in work_experience %}
+    {% for w in work_experience[:4] %}
       <div class="entry">
         <div class="title">
           <b>{{ w['title'] }}</b><br>
