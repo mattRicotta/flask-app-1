@@ -225,9 +225,9 @@ publications = [
 # SKILLS
 # use a new list for each column
 skills = [
-  ['Leadership', 'Communication', 'Teaching', 'Data Visualization'],
-  ['Root Cause Analysis', 'Statistical Analysis', 'Database Design', 'Data Management'], 
-  ['VBA', 'SQL', 'Python', 'HTML/CSS']
+  ['Leadership', 'Reporting', 'Data Visualization', 'Root Cause Analysis', 'Statistical Analysis'],
+  ['Microsoft Office', 'VBA', 'Database Design', 'Data Management', 'SQL'], 
+  ['Salesforce.com', 'Apex', 'Visualforce', 'Python', 'HTML/CSS']
 ]
 # ======================================================
 # HOBBIES
