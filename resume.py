@@ -223,6 +223,7 @@ publications = [
 ]
 # ======================================================
 # SKILLS
+# use a new list for each column
 skills = [
   ['Leadership', 'Communication', 'Teaching', 'Data Visualization'],
   ['Root Cause Analysis', 'Statistical Analysis', 'Database Design', 'Data Management'], 
@@ -230,6 +231,7 @@ skills = [
 ]
 # ======================================================
 # HOBBIES
+# use a new list for each column
 hobbies = [
   ['Cooking', 'Surfing', 'Hiking', 'Sci-fi Literature'], 
   ['PC Building', 'Arduino', 'Coding'], 
