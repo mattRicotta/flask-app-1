@@ -1,0 +1,30 @@
+@media print {
+  * {
+    color: #000;
+  }
+
+  hr {
+    background-color: #00000050;
+  }
+
+  a {
+    color: #00000050
+  }
+
+  img {
+    border: #00000050;
+    filter: grayscale(100%);
+  }
+
+  .cornercircle {
+    visibility: hidden;
+  }
+  
+  header {
+    background-color: #fff;
+  }
+
+  .entry {
+    page-break-inside: avoid;
+  }
+}

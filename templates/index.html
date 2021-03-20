@@ -2,7 +2,7 @@
 {% block content %}
 <div class="cornercircle"></div>
 <header>
-  <a href="https://www.github.com/mattRicotta" target="_blank" alt="cannoli logo"><img src="../static/images/cannoli.png" class="logo"></a>
+  <a href="https://mattRicotta.github.io/resume" target="_blank" alt="cannoli logo"><img src="../static/images/cannoli.png" class="logo"></a>
   <div class="title">
     <h1>Matt Licata</h1>
     <h2>Quality Analyst | Data Management Specialist</h2>
@@ -20,10 +20,23 @@
     <h3 class="title">About</h3>
     <p>{{ about }}</p>
   </section>
+  <section id="skills">
+    <hr>
+    <h3 class="title"> Skills</h3>
+    {% for skill_list in skills %}
+      <div class="column">
+        <ul>
+          {% for skill in skill_list %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
   <section id="workexperience">    
     <hr>
     <h3 class="title">Work Experience</h3>
-    {% for w in work_experience[:4] %}
+    {% for w in work_experience %}
       <div class="entry">
         <div class="title">
           <b>{{ w['title'] }}</b><br>
@@ -49,7 +62,7 @@
   </section>
   <section id="certifications">
     <hr>
-    <h3 class="title"> Certifications and Continuing Education</h3>
+    <h3 class="title"> Certifications</h3>
     {% for cert in certifications %}
       <div class="entry">
         <b>{{ cert['name'] }}</b><br>
@@ -64,19 +77,6 @@
       <div class="entry">
         {{ p['authors'] }}. <i>{{ p['title'] }}</i>. {{ p['journal'] }}. {{ p['pub_date'] }}. 
         <a href="{{ p['url'] }}" target="_blank">{{ p['url_label'] }}</a>
-      </div>
-    {% endfor %}
-  </section>
-  <section id="skills">
-    <hr>
-    <h3 class="title"> Skills</h3>
-    {% for skill_list in skills %}
-      <div class="column">
-        <ul>
-          {% for skill in skill_list %}
-            <li>{{ skill }}</li>
-          {% endfor %}
-        </ul>
       </div>
     {% endfor %}
   </section>
