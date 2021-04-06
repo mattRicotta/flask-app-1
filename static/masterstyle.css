@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 10%);
+    font-family: "Segoe UI", "Helvetica";
+    color: hsl(0, 0%, 80%);
+}
+
+a {
+    color: hsl(0, 100%, 38%);
+}
+
+a:active {
+    color: hsl(0, 100%, 75%);
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    color: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 0%);
+    height: 60px;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar span {
+    vertical-align: middle;
+}
+
+.navbar a {
+    color:hsl(0, 0%, 100%);
+}
+
+.navbar a:active{
+    color: hsl(0, 0%, 100%);
+}
+
+.navbar .logo {
+    height: 40px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 50%;
+    border: solid thin hsl(0, 100%, 10%);
+    vertical-align: middle;
+}
+
+.main {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+.main hr {
+    border:0;
+    height:2px;
+    background-color: hsl(0, 100%, 25%);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

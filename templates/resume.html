@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block stylesheets %}<link rel="stylesheet" href="../static/resumestyle.css" type="text/css">{% endblock %}
+{% block title %}mattRicotta | Resume{% endblock %}
+{% block content %}<div class="cornercircle"></div>
+<header>
+  {# <a href="#" onclick="window.print()"><img class="logo" src="../static/images/cannoli.png" alt="print resume"></a> #}
+  {% set ci = contact_info %}
+  <div class="contactinfo">
+    {{ ci['street'] }}<br>
+    {{ ci['city'] }}, {{ci['state']}} {{ ci['zip']}}<br>
+    {{ ci['phone'] }}<br>
+    <a href="mailto:{{ ci['email'] }}">{{ ci['email'] }}</a>
+  </div>
+  <div class="title">
+    <h1>{{ ci['name'] }}</h1>
+    <h2>{{ ci['title'] }}</h2>
+  </div>
+  {% if links %}
+  <div class="links">
+    {% for l in links %}
+      {{ l['label'] }}: <a href="{{ l['url'] }}">{{ l['url'] }}</a><br>
+    {% endfor %}
+  </div>
+  {% endif %}
+</header>
+<section id="about">
+  <hr>
+  <h3 class="title">About</h3>
+  <p>{{ about }}</p>
+</section>
+<section id="skills">
+  <hr>
+  <h3 class="title"> Skills</h3>
+  {# divide skills list into 3 columns #}
+  <table>  
+    <tr>
+    {% set list = skills %}
+    {% for sublist in list %}
+      <td>
+        <ul>
+          {% for item in sublist %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </td>
+    {% endfor %}
+    </tr>
+  </table>
+  {# #}
+</section>
+<section id="workexperience">    
+  <hr>
+  <h3 class="title">Work Experience</h3>
+  {% for w in work_experience %}
+    <div class="entry">
+      <div class="title">
+        <b>{{ w['title'] }}</b><br>
+        <i>{{ w['company'] }} | {{ w['city'] }} | {{ w['start_date'] }} - {{ w['end_date'] }}</i>
+      </div>
+      <ul>
+        {% for bulletpoint in w['description'] %}<li>{{ bulletpoint }}</li>{% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+<section id="education">
+  <hr>
+  <h3 class="title">Education</h3>
+  {% for ed in education %}
+    <div class="entry">
+      <b>{{ ed['degree'] }} | {{ ed['major'] }}</b><br>
+      <i>{{ ed['school'] }}, {{ ed['city'] }} | {{ ed['dates'] }}</i>
+    </div>
+  {% endfor %}
+</section>
+{% if certifications %}
+  <section id="certifications">
+    <hr>
+    <h3 class="title"> Certifications</h3>
+    {% for cert in certifications %}
+      <div class="entry">
+        <b>{{ cert['name'] }}</b><br>
+        <i>{{ cert['institution'] }} | {{ cert['issued_on'] }}</i>
+      </div>
+    {% endfor %}
+  </section>
+{% endif %}
+<section id="publications">
+  <hr>
+  <h3 class="title">Publications</h3>
+  {% for p in publications %}
+    <div class="entry">
+      {{ p['authors'] }}. <i>{{ p['title'] }}</i>. {{ p['journal'] }}. {{ p['pub_date'] }}. 
+      <a href="{{ p['url'] }}" target="_blank">{{ p['url_label'] }}</a>
+    </div>
+  {% endfor %}
+</section>
+<section id="hobbies">
+  <hr>
+  <h3 class="title">Hobbies & Interests</h3>
+  <table>  
+    <tr>
+    {% set list = hobbies %}
+    {% for sublist in list %}
+      <td>
+        <ul>
+          {% for item in sublist %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </td>
+    {% endfor %}
+    </tr>
+  </table>
+</section>
+{% endblock %}

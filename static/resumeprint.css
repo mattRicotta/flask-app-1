@@ -1,0 +1,51 @@
+@media print {
+  * {
+    color: #000;
+  }
+
+  body {
+    max-width:100%;
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .navbar {
+    visibility: hidden;
+  }
+
+  .main {
+    position:relative;
+    top: 0;
+  }
+
+  .main hr {
+    background-color: #00000050;
+  }
+
+  .main a, .main header a {
+    color: #00000050;
+  }
+
+  .main img {
+    filter: grayscale(100%);
+  }
+
+  .main .cornercircle, .main #logo {
+    visibility: hidden;
+  }
+
+  .main header {
+    padding: 0px;
+    margin: 20px 20px;
+    background-color: #fff;
+  }
+
+  .main .logo {
+    border: #00000050;
+    height:0;
+    visibility: hidden;
+  }
+
+  .main .entry {
+    page-break-inside: avoid;
+  }
+}

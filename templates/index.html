@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block stylesheets %}<link rel="stylesheet" href="../static/indexstyle.css" type="text/css">{% endblock %}
+{% block title %}mattRicotta{% endblock %}
+{% block content %}
+<header><h1>mattRicotta</h1></header>
+<hr>
+<nav>
+<ul>
+  {% for link in index_links %}
+    <li style="list-style-type:none;"><a href="{{ link['url'] }}">{{ link['label'] }}</a></li>
+  {% endfor %}
+</ul>
+</nav>
+{% endblock %}

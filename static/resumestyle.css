@@ -1,0 +1,92 @@
+/* Edits the .main section of page */
+
+body {
+  color: hsl(0, 0%, 20%);
+  background-color:hsl(0, 0%, 100%);
+}
+.main {
+  max-width: 1200px;
+  min-width: 600px;
+  z-index:0;
+}
+
+/* ------ header formatting --------------------------------- */
+.main header {
+  position: relative;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: hsla(300, 100%, 13%, 0.75);
+  color: hsla(0, 0%, 100%);
+}
+
+.main hr {
+  margin-left:-20px;
+  margin-bottom: 10px;
+  background-color: hsl(300, 50%, 13%);
+}
+.main header a {
+  color: hsl(0, 0%, 100%);
+}
+
+.main header .title {
+  margin: 0px;
+}
+
+.main header .links {
+  margin: 10px 0px;
+}
+
+.main header .logo {
+  position: absolute;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  border: solid hsl(300, 0%, 50%);
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+.main header .contactinfo {
+  position: absolute;
+  right: 40px;
+  text-align: right;
+  z-index: 1;
+}
+/* ---- end header formatting ------------------------------*/
+
+.main section {
+  margin: 20px;
+  margin-left: 40px;
+}
+
+.main section .title {
+  margin: 0px 0px 10px -20px;
+}
+
+.main section .entry {
+  margin: 20px 0px;
+}
+
+.main section ul {
+  margin-left: 20px;
+}
+
+.main section table {
+  width: 100%;
+  text-align:left;
+}
+
+.main td {
+  vertical-align: top;
+}
+
+.main .cornercircle {
+  margin: 0;
+  width: 400px;
+  height: 400px;
+  background-color: hsla(267, 100%, 14%, 0.452);
+  border-radius: 0 0 100% 0;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
