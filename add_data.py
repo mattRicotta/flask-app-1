@@ -2,8 +2,8 @@ from app import db
 from models import *
 from datetime import datetime
 
+db.drop_all()
 db.create_all()
-
 
 # create a record for test user
 test_user = User(
@@ -91,6 +91,9 @@ hby_lst = [
 
 for item in hby_lst:
   db.session.add(Hobby(user_id=test_user.id, hobby=item))
+
+# create a blank resume for the user
+db.session.add(Resume(user_id=test_user.id, name="My First Resume"))
 
 # Commit Changes to Database
 db.session.commit()

@@ -1,0 +1,10 @@
+#userinfo td,
+#userinfo th {
+  padding: 5px 10px;
+  text-align: left;
+}
+
+#userinfo .label {
+  text-align: right;
+  vertical-align: top;
+}

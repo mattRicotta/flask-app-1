@@ -1,14 +1,27 @@
 {% extends "base.html" %}
+{# HEAD #}
 {% block stylesheets %}<link rel="stylesheet" href="../static/indexstyle.css" type="text/css">{% endblock %}
-{% block title %}mattRicotta{% endblock %}
+{% block title %}mattRicotta | Resume Builder App{% endblock %}
+{# /HEAD #}
+
+{# BODY #}
 {% block content %}
-<header><h1>mattRicotta</h1></header>
+<header><h1>Resume Builder App</h1></header>
 <hr>
-<nav>
-<ul>
-  {% for link in index_links %}
-    <li style="list-style-type:none;"><a href="{{ link['url'] }}">{{ link['label'] }}</a></li>
-  {% endfor %}
-</ul>
-</nav>
+<h2>Users:</h2>
+<table class="querytable">
+  <tr>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>ID</th>
+  </tr>
+  {% for user in users %}<tr>
+    <td><a href="{{ url_for('profile', user_id = user.id) }}">{{ user }}</a></td>
+    <td>{{ user.name_first }} {{ user.name_last }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.id }}</td>
+  </tr>{% endfor %}
+</table>
 {% endblock %}
+{# /BODY #}

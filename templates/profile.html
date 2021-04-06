@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{# HEAD #}
+{% block stylesheets %}<link rel="stylesheet" href="../static/profilestyle.css" type="text/css">
+<link rel="stylesheet" href="../static/indexstyle.css" type="text/css">{% endblock %}
+{% block title %}Resume App | {{ user.username }}{% endblock %}
+{# /HEAD #}
+
+{# BODY #}
+{% block content %}
+<header><h1>{{ user }}</h1></header>
+<hr>
+<table id="userinfo">
+  <tr>
+    <td class="label">Name:</td>
+    <td>{{ user.name_first }} {{ user.name_last }}</td>
+  </tr>
+  <tr>
+    <td class="label">Email:</td> 
+    <td>{{ user.email }}</td>
+  </tr>
+  <tr>
+    <td class="label">Address:</td>
+    <td>
+      {{ user.street }}<br>
+      {{ user.city }}, {{ user.state }} {{ user.zip }}
+    </td>
+
+  </tr>
+</table>
+<br>
+<hr>
+<h2>Resumes</h2>
+<table style="margin:20px;">
+  {% for resume in user.resumes %}
+    <td>{{ resume.name }}</td>
+  {% endfor %}
+</table>
+{% endblock %}
+{# /BODY #}
