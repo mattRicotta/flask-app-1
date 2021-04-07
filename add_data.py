@@ -2,8 +2,8 @@ from app import db
 from models import *
 from datetime import datetime
 
+db.drop_all()
 db.create_all()
-
 
 # create a record for test user
 test_user = User(
