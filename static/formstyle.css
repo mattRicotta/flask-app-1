@@ -13,8 +13,13 @@ input {
   width: 150px;
 }
 
+input[type=submit] {
+  padding: 5px 10px;
+  width: auto;
+}
+
 label {
-  min-width: 130px;
+  min-width: 140px;
   text-align: right;
   display: inline-block;
 }
@@ -29,10 +34,4 @@ fieldset {
 
 #state {
   width: 50px;
-}
-
-input[type=submit] {
-  width: auto;
-  margin-top: 10px;
-  margin-left: 135px;
 }
