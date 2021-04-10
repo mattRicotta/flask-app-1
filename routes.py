@@ -14,6 +14,10 @@ def index():
   users = User.query.all()
   return render_template("index.html", users=users)
 
+@app.route('/newuser')
+def newuser():
+  return render_template("new_user.html")
+
 @app.route('/profile/<int:user_id>')
 def profile(user_id):
   user = User.query.get(user_id)
