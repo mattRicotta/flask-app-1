@@ -1,10 +1,9 @@
-# env
 from flask import render_template, request, url_for
 from flask import Flask
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
-# local
+
 from app import app, db
 from models import *
 
