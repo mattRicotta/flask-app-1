@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}New User{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="../static/formstyle.css" type="text/css">{% endblock %}
+{% block content %}
+    <form>
+    <fieldset>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email"><br>
+      <label for="name_first">First Name:</label>
+      <input type="text" id="name_first" name="name_first"><br>
+      <label for="name_last">Last Name:</label>
+      <input type="text" id="name_last" name="name_last"><br>
+      <label for="street">Mailing Address:</label>
+      <input type="text" id="street" name="street"><br>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city"><br>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" pattern="[A-Za-z]{2}" 
+        title="use two-letter abbreviation for state">
+         <i>(use two-letter abbreviation)</i> <br>
+      <!-- submit -->
+      <label for="submit"></label>
+      <input type="submit" id="submit" name="submit">
+    </fieldset>
+    </form>
+{% endblock %}

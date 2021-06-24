@@ -10,7 +10,7 @@ class User(db.Model):
   email = db.Column(db.String(50), index = True, unique = True)
   street = db.Column(db.String(50))
   city = db.Column(db.String(50))
-  state = db.Column(db.String(50))
+  state = db.Column(db.String(2))
   db.UniqueConstraint(username, email)
   
   # User child relationships
@@ -21,10 +21,8 @@ class User(db.Model):
   skills = db.relationship('Skill', backref='user', lazy='dynamic')
   hobbies = db.relationship('Hobby', backref='user', lazy='dynamic')
 
-  
   def __repr__(self):
     return self.username
-
 
 # Job Class
 class Job(db.Model):
@@ -96,7 +94,7 @@ class Hobby(db.Model):
 class Resume(db.Model):
   id = db.Column(db.Integer, primary_key = True)
   user_id = db.Column(db.Integer, db.ForeignKey('user.id')) # parent User
-  name = db.Column(db.String(50), index=True)
+  name = db.Column(db.String(50), index=True, unique=True)
 
   def __repr__(self):
     return f"{self.user}: {self.name}"
