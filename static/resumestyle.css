@@ -17,7 +17,7 @@ body {
 /* ------ header formatting --------------------------------- */
 .main header {
   display:flex;
-  margin: 20px auto;
+  margin: 20px;
   padding: 10px 20px;
   background-color: hsla(300, 100%, 13%, 0.75);
   color: hsla(0, 0%, 100%);
