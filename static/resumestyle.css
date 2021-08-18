@@ -53,8 +53,7 @@ body {
 /* ---- end header formatting ------------------------------*/
 
 .main section {
-  margin: 20px;
-  margin-left: 40px;
+  margin: 20px 50px 50px;
 }
 
 .main section .title {
@@ -62,7 +61,7 @@ body {
 }
 
 .main section .entry {
-  margin: 20px 0px;
+  margin: 20px;
 }
 
 .main section ul {

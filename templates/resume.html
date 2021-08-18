@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="../static/resumestyle.css" type="text/css">
   <link rel="stylesheet" href="../static/resumeprint.css" type="text/css">
 {% endblock %}
-{% block title %}{{ ci['name'] }} | {{ ci['title'] }}{% endblock %}
+{% block title %}{{ ci['name'] }} - {{ ci['title'] }}{% endblock %}
 {% block content %}<div class="cornercircle"></div>
 <header>
   <div class="title">
@@ -28,6 +28,21 @@
   <h3 class="title">About</h3>
   <p>{{ about }}</p>
 </section>
+<section id="workexperience">    
+  <hr>
+  <h3 class="title">Work Experience</h3>
+  {% for w in work_experience %}
+    <div class="entry">
+      <div class="title">
+        <b>{{ w['title'] }}</b><br>
+        <i>{{ w['company'] }} | {{ w['city'] }} | {{ w['start_date'] }} - {{ w['end_date'] }}</i>
+      </div>
+      <ul>
+        {% for bulletpoint in w['description'] %}<li>{{ bulletpoint }}</li>{% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
 <section id="skills">
   <hr>
   <h3 class="title"> Skills</h3>
@@ -45,21 +60,6 @@
     </tr>
   </table>
   {# #}
-</section>
-<section id="workexperience">    
-  <hr>
-  <h3 class="title">Work Experience</h3>
-  {% for w in work_experience %}
-    <div class="entry">
-      <div class="title">
-        <b>{{ w['title'] }}</b><br>
-        <i>{{ w['company'] }} | {{ w['city'] }} | {{ w['start_date'] }} - {{ w['end_date'] }}</i>
-      </div>
-      <ul>
-        {% for bulletpoint in w['description'] %}<li>{{ bulletpoint }}</li>{% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
 </section>
 <section id="education">
   <hr>
