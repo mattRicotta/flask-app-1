@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% set ci = contact_info %}
-{% block stylesheets %}<link rel="stylesheet" href="../static/resumestyle.css" type="text/css">{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="../static/resumestyle.css" type="text/css">
+  <link rel="stylesheet" href="../static/resumeprint.css" type="text/css">
+{% endblock %}
 {% block title %}{{ ci['name'] }} | {{ ci['title'] }}{% endblock %}
 {% block content %}<div class="cornercircle"></div>
 <header>
