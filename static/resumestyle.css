@@ -9,33 +9,37 @@ body {
   min-width: 600px;
   z-index:0;
 }
-
-/* ------ header formatting --------------------------------- */
-.main header {
-  position: relative;
-  margin: 20px;
-  padding: 10px 20px;
-  background-color: hsla(300, 100%, 13%, 0.75);
-  color: hsla(0, 0%, 100%);
-}
-
 .main hr {
   margin-left:-20px;
   margin-bottom: 10px;
   background-color: hsl(300, 50%, 13%);
 }
+/* ------ header formatting --------------------------------- */
+.main header {
+  display:flex;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: hsla(300, 100%, 13%, 0.75);
+  color: hsla(0, 0%, 100%);
+}
+.main header .title {
+  justify-self: flex-start;
+  align-self: flex-start;
+  flex-wrap:wrap;
+  width:100%;
+}
 .main header a {
   color: hsl(0, 0%, 100%);
 }
-
-.main header .title {
-  margin: 0px;
+.main header .contactinfo {
+  justify-self:flex-end;
+  align-self:flex-start;
+  text-align:right;
 }
-
-.main header .links {
-  margin: 10px 0px;
+.main header .title .links {
+  margin: 20px auto;
 }
-
+/*
 .main header .logo {
   position: absolute;
   right: 20px;
@@ -45,13 +49,7 @@ body {
   border-radius: 50%;
   opacity: 50%;
 }
-
-.main header .contactinfo {
-  position: absolute;
-  right: 40px;
-  text-align: right;
-  z-index: 1;
-}
+*/
 /* ---- end header formatting ------------------------------*/
 
 .main section {
