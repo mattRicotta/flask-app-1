@@ -78,6 +78,7 @@
     {% for cert in certifications %}
       <div class="entry">
         <b>{{ cert['name'] }}</b><br>
+        {% if cert['description'] %}{{ cert['description']}}<br>{% endif %}
         <i>{{ cert['institution'] }} | {{ cert['issued_on'] }}</i>
       </div>
     {% endfor %}

@@ -5,8 +5,9 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 from app import app, db
-from models import *
+from mydata import *
 
+'''
 # resume-app page
 @app.route('/')
 def index():
@@ -21,15 +22,11 @@ def newuser():
 def profile(user_id):
   user = User.query.get(user_id)
   return render_template("profile.html", user=user)
+'''
 
 # resume page
-'''
-@app.route('/resume')
+@app.route('/')
 def resume():
-  def list_chunk(lst, chunk_length):
-
-    return [lst[i:i + chunk_length] for i in range(0, len(lst), chunk_length)]
-
   return render_template("resume.html",
     contact_info=contact_info, 
     links=links, 
@@ -38,7 +35,6 @@ def resume():
     education=education, 
     certifications=certifications, 
     publications=publications, 
-    skills=list_chunk(skills, 4), 
-    hobbies=list_chunk(hobbies, 4)
+    skills=skills,
+    hobbies=hobbies
   )
-'''
