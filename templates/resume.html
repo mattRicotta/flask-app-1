@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block stylesheets %}<link rel="stylesheet" href="../static/resumestyle.css" type="text/css">{% endblock %}
-{% block title %}mattRicotta | Resume{% endblock %}
+{% block title %}{{ contact_info['name'] }} | {{ contact_info['title'] }}{% endblock %}
 {% block content %}<div class="cornercircle"></div>
 <header>
   {# <a href="#" onclick="window.print()"><img class="logo" src="../static/images/cannoli.png" alt="print resume"></a> #}
@@ -94,6 +94,7 @@
     </div>
   {% endfor %}
 </section>
+{% if hobbies %}
 <section id="hobbies">
   <hr>
   <h3 class="title">Hobbies & Interests</h3>
@@ -110,4 +111,5 @@
     </tr>
   </table>
 </section>
+{% endif %}
 {% endblock %}

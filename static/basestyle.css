@@ -49,9 +49,6 @@ a:active {
 }
 
 .main {
-    position: absolute;
-    top: 60px;
-    width: 100%;
 }
 .main hr {
     border:0;

@@ -70,8 +70,12 @@ body {
 .main section ul {
   margin-left: 20px;
 }
+.main section li {
+  margin: 4px 0;
+}
 
 .main section table {
+  table-layout: fixed;
   width: 100%;
   text-align:left;
 }
