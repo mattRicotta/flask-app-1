@@ -2,7 +2,6 @@
 {% set ci = contact_info %}
 {% block stylesheets %}
   <link rel="stylesheet" href="../static/resumestyle.css" type="text/css">
-  <link rel="stylesheet" href="../static/resumeprint.css" type="text/css">
 {% endblock %}
 {% block title %}{{ ci['name'] }} - {{ ci['title'] }}{% endblock %}
 {% block content %}<div class="cornercircle"></div>
@@ -25,12 +24,14 @@
 </header>
 <section id="about">
   <hr>
-  <h3 class="title">About</h3>
-  <p>{{ about }}</p>
+  <h2 class="title">About</h2>
+  <div class="entry">  
+    <p>{{ about }}</p>
+  </div>
 </section>
 <section id="workexperience">    
   <hr>
-  <h3 class="title">Work Experience</h3>
+  <h2 class="title">Work Experience</h2>
   {% for w in work_experience %}
     <div class="entry">
       <div class="title">
@@ -45,25 +46,27 @@
 </section>
 <section id="skills">
   <hr>
-  <h3 class="title"> Skills</h3>
+  <h2 class="title"> Skills</h2>
   {# divide skills list into 3 columns #}
-  <table>  
-    <tr>
-    {% set list = skills %}
-    {% for sublist in list %}
-      <td>
-        <ul>
-          {% for item in sublist %}<li>{{ item }}</li>{% endfor %}
-        </ul>
-      </td>
-    {% endfor %}
-    </tr>
-  </table>
+  <div class="entry">
+    <table>  
+      <tr>
+      {% set list = skills %}
+      {% for sublist in list %}
+        <td>
+          <ul>
+            {% for item in sublist %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+        </td>
+      {% endfor %}
+      </tr>
+    </table>
+  </div>
   {# #}
 </section>
 <section id="education">
   <hr>
-  <h3 class="title">Education</h3>
+  <h2 class="title">Education</h2>
   {% for ed in education %}
     <div class="entry">
       <b>{{ ed['degree'] }} | {{ ed['major'] }}</b><br>
@@ -74,7 +77,7 @@
 {% if certifications %}
   <section id="certifications">
     <hr>
-    <h3 class="title"> Certifications</h3>
+    <h2 class="title"> Certifications</h2>
     {% for cert in certifications %}
       <div class="entry">
         <b>{{ cert['name'] }}</b><br>
@@ -86,7 +89,7 @@
 {% endif %}
 <section id="publications">
   <hr>
-  <h3 class="title">Publications</h3>
+  <h2 class="title">Publications</h2>
   {% for p in publications %}
     <div class="entry">
       {{ p['authors'] }}. <i>{{ p['title'] }}</i>. {{ p['journal'] }}. {{ p['pub_date'] }}. 
@@ -97,7 +100,7 @@
 {% if hobbies %}
 <section id="hobbies">
   <hr>
-  <h3 class="title">Hobbies & Interests</h3>
+  <h2 class="title">Hobbies & Interests</h2>
   <table>  
     <tr>
     {% set list = hobbies %}
